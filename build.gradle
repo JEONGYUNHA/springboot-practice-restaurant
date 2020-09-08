@@ -31,15 +31,8 @@ subprojects {
 
 
     dependencies{
-        compile project(':kitchen')
         testCompile group: 'junit', name: 'junit', version: '4.12'
 
     }
 }
 
-//project(':order') {
-//}
-//
-//project(':kitchen'){
-//
-//}

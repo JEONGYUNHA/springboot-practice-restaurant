@@ -16,18 +16,16 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    private KitchenDto kitchen;
-
     @Transactional
     public Long saveOrder(OrderDto orderDto) {
 
-//        HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
-//
-//        RestTemplate restTemplate = new RestTemplate(factory);
-//        String url = "http://localhost:8081/api/v1/order/kitchen/newOrder";
-//
-//        KitchenDto newOrder = new KitchenDto(orderDto.getMenuName(), orderDto.getQuantity());
-//        restTemplate.postForObject(url, newOrder, KitchenDto.class);
+        HttpComponentsClientHttpRequestFactory factory = new HttpComponentsClientHttpRequestFactory();
+
+        RestTemplate restTemplate = new RestTemplate(factory);
+        String url = "http://localhost:8081/api/v1/order/kitchen/newOrder";
+
+        KitchenDto newOrder = new KitchenDto(orderDto.getMenuName(), orderDto.getQuantity());
+        restTemplate.postForObject(url, newOrder, KitchenDto.class);
 
         return orderRepository.save(orderDto.toEntity()).getId();
     }
