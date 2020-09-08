@@ -6,10 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @NoArgsConstructor
 @Builder
 @Data
-public class KitchenDto {
+public class KitchenDto implements Serializable {
 
     private String menuName;
     private int quantity;

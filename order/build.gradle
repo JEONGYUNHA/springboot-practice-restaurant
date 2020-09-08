@@ -28,7 +28,6 @@ repositories {
 
 dependencies{
 
-    compile project(":kitchen")
     compile('org.projectlombok:lombok')
     annotationProcessor('org.projectlombok:lombok')
 
@@ -44,5 +43,7 @@ dependencies{
 
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
 
-    compile project(":kitchen")
+    compile project(':kitchen')
 }
+
+
