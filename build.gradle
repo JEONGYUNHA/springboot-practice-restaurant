@@ -35,4 +35,9 @@ subprojects {
 
     }
 }
+project(":order"){
 
+}
+project(":kitchen"){
+
+}
